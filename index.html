@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Calender</title>
+	<link href="./css/main.css" rel="stylesheet" type="text/css"/>
+  <link rel="shortcut icon" type="image/png" href="./assets/image/favicon.png" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Nunito:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body >
+	<div class="container">
+    <div class="background background--right"></div>
+		<div class="container__event">
+			<div class="task">
+				<div class="task__dark">
+					<div><button class="theme">Night Mode</button></div>
+          </div>
+          <div class="task__icon"><img src="./assets/image/task.png" alt="To Do List"></div>
+          <div class="task__add">Add Your Task 
+            <button id="addTask">+</button>
+            </div> 
+          <div class="task__message">Your tasks for today:</div> 
+           <div class="scroll">
+             <div class="blur"></div>
+            <div class="dailytask">
+              <!-- <div class="time">9:00</div>
+              <div class="work">to work</div> -->
+            </div>
+            
+          </div>
+         
+        </div>
+         <div class="task__fadeout"></div>
+        
+        <div class="calender">
+          <div class="calender__monthYear" id="arrowbttn">
+            <div class="arrow arrow--left">&lt;</div>
+            <div>
+              <div>
+                <span class="month">
+                 May
+                </span>
+                <span  class="year">
+                 1998
+                </span>
+              </div>
+              </div>
+            <div class="arrow arrow--right">&gt;</div>
+        </div>
+        <div class="calender__weekdays">
+        <div>Mon</div>
+        <div>Tue</div>
+        <div>Wed</div>
+        <div>Thu</div>
+        <div>Fri</div>
+        <div>Sat</div>
+        <div>Sun</div>
+        </div>
+         <div class="calender__days" id="selected">
+         </div>
+      </div>
+    </div>
+    <div class="background background--left"></div>
+    </div>
+
+<div id="myModal" class="modal">
+  
+  <form class="modal-content">
+     
+  <div >Add Event</div>
+      <div class="tastTime">
+        <span> Hour  <input type="number" id="hour" min="00" max="23" required></span>
+          <span>Minute  <input type="number" id="minute" min="00" max="59" required></span>
+          </div>
+
+      <div class="taskToDo">
+        <span>Task  <input type="text" id="todo" required></span>
+        </div>
+
+       
+    
+        <button class="bttn bttn-submit" id="submitEvent">
+      Submit
+      </button>
+   
+        <button class="bttn bttn-cancel" id="cancelEvent">
+      Cancel
+      </button>
+    
+      
+  </form>
+  
+</div>
+    <script src="/js/app.js"></script>
+     <script src="/js/db.js"></script>
+  </body>
+</html>

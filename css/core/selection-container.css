@@ -1,0 +1,268 @@
+*{
+  margin:0;
+  padding:0;
+  border-sizing:border-box;
+ 
+}
+
+.container{
+  padding: 0px 0px;
+  display: flex;
+  width:100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+  color:white;
+}
+
+.container__event{
+display: flex;
+width:1000px;
+height: 600px;
+padding: 5% 0px;
+transition: ease all 0.1s;
+}
+
+.task{
+display: flex;
+flex-direction: column;
+width:400px;
+align-items: center;
+background-color: #606fee;
+font-family: 'Work Sans', sans-serif;
+padding-top: 30px;
+font-size: 15px;
+
+}
+
+
+.task img{
+  width: 80px;
+  height: 80px;
+}
+
+.task__message{
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  padding-left: 70px;
+}
+
+.task__add{
+  padding: 20px 0px;
+  
+}
+
+
+/* Scroll */
+.scroll{
+display: flex;
+flex-direction: column;
+padding-top: 20px;
+overflow: scroll;
+background: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+     /* scroll bar transparent */
+  
+}
+
+.scroll div{
+display: flex;
+justify-content: flex-start;
+align-items: center;
+width: 300px;
+font-size: 13px;
+padding-bottom:35px;
+}
+/* Time and Date Dynamic Div creation */
+.time{
+  width:60px;
+  border: 2px solid;
+  border-radius: 12px;
+  background-color: white;
+  color:#606fee;
+  text-align: center;
+}
+
+.work{
+margin-left: 20px;
+}
+
+
+/* Calender */
+.calender{
+display: flex;
+flex-direction: column;
+width:600px;
+height: 100%;
+background-color: #303658;
+border-left: 0.5px solid rgb(245, 196, 196);
+color:azure;
+font-family: 'Nunito', sans-serif;
+cursor: pointer;
+}
+
+.calender__monthYear{
+  display:flex;
+  height: 80px;
+  justify-content: space-around;
+  align-items: center;
+ padding: 20px 100px 20px 100px;
+  font-size:  30px ;
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
+}
+.calender__weekdays{
+  display: flex;
+  align-items: center;
+  padding:0px 100px 20px 100px;
+  justify-content: space-between;
+  height: 30px;
+}
+
+.calender__weekdays div{
+  text-align: center;
+  width: calc(400px/7);
+}
+
+.calender__days{
+  display: flex;
+  flex-wrap:wrap;
+  height: 350px;
+  justify-content: space-between;
+  align-items: center;
+  padding:0px 100px;
+}
+
+.calender__days div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(400px/7);
+  height:50px ;
+  border-radius: 50%;  
+ 
+}
+
+.calender__days div:hover:not(.date--prevmonth,date--nextmonth) {
+  transition:.9s;
+  background-color: #ff6b6b;
+}
+
+/* Next and Previous Month Arrow */
+.arrow{
+  font-size:20px;
+  cursor: pointer;
+}
+
+/* Selected Current Previous day div and  properties  */
+.date{
+color:grey;
+}
+
+.date--current{
+  color:white;
+  background-color: #1dd1a1;
+}
+
+.task__dark{
+  width: 100%;
+ padding: 0px 0px 20px  20px;
+  align-content: center;
+  cursor: pointer;
+}
+
+.date--selected{
+  color:white;
+  background-color: #ff6b6b;
+}
+
+
+
+/* themes background */
+.night{
+   background-color: #2b2a2a;
+}
+
+.light{
+   background-color: white;
+}
+
+.task__fadeout {
+    position: absolute;
+    padding-top: 100px;
+    width: 400px;
+    margin-top: 500px;
+    /* background: -webkit-linear-gradient(rgba(243, 240, 240, 0) 0%, rgb(206, 229, 236) 100%);   */
+   pointer-events: none;
+    background: -webkit-linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(240, 240, 240, 0.5) 96%);
+   
+}
+
+/* responsive layout  for browser width  */
+
+@media (max-width: 1220px){
+.container__event{
+transition: ease all 1s;
+width:800px;
+height: 600px;
+}
+.calender__monthYear{
+  font-size: 20px;
+}
+
+.task{
+width:200px;
+}
+
+.calender{
+width:600px;
+}
+.calender__weekdays{
+  padding:0 100px;
+}
+.calender__weekdays div{
+  width: calc(400px/7);
+}
+.calender__days{
+  padding:0 100px;
+}
+
+.calender__days div{
+  width: calc(400px/7);
+  height:50px ;
+}
+
+.task{
+font-size: 15px;
+}
+
+
+
+.scroll div{
+  justify-content: center;
+width: 100px;
+font-size: 10px;
+padding-bottom:30px;
+}
+
+.time{
+  width: 40px;
+  border-radius: 10px;
+}
+
+.work{
+display:none;
+margin-left: 0px;
+}
+.task__fadeout {
+    width: 200px;
+}
+
+}
+
