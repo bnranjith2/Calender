@@ -17,7 +17,7 @@
 
 
   const renderUI = (checkSelected = false) => {
-    debugger;
+    
     date.setDate(1);
 
     const monthDays = document.querySelector(".calender__days");
@@ -53,7 +53,7 @@
        
       
         if (Number(checkSelected.innerHTML) == dayInc && dayInc != new Date().getDate() &&(date.getMonth() === new Date().getMonth() || date.getMonth() !== new Date().getMonth())) {
-          debugger;
+          
           days += `<div class="date date--selected">${dayInc}</div>`;
         } else {
           days += `<div>${dayInc}</div>`;
@@ -84,7 +84,7 @@
   }
 
   function selectDate(e) {
-   debugger;
+   
     console.log(e.target.className);
     if (e.target.className == '' ||e.target.className == 'date date--current') {
       renderUI(e.target)

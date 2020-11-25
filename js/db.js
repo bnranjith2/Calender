@@ -34,7 +34,7 @@
   }
 
   function displayTasks(e=undefined) {
-    debugger;
+    
   if(!(e!=undefined && (e.target.className=="date date--prevmonth" || e.target.className=="date date--nextmonth"))){
     let flag=0;
     let tasks='';
